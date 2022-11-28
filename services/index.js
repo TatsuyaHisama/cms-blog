@@ -20,7 +20,7 @@ export const getPosts = async()=> {
                             slug
                             title
                             excerpt
-                            featuredPost {
+                            featuredImage {
                                 url
                             }
                             category {
@@ -32,7 +32,7 @@ export const getPosts = async()=> {
                 }
             }
         `;
-  const result = await request(graphqlAPI, query);
+ const result = await request(graphqlAPI, query);
 
-  return result.postsConnection.edges;
+ return result.postsConnection.edges;
 };
